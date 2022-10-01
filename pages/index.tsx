@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout/Layout";
-import { ReactElement, useState, useEffect, useCallback } from "react";
+import { ReactElement, useState, useEffect, useCallback , SetStateAction} from "react";
 import { Container, Row, Col, Button, Spinner } from "react-bootstrap";
 import axios from "axios";
 
@@ -50,19 +50,29 @@ const Index = () => {
                </Button>
             </Col>
          </Row>
-
-         {/* <Row>
+{/* 
+         <Row>
             <Col>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => { */}
 
+
+
+
+
+
+
+                       
+
+
          <Row>
             <Col>
                {loading ? <Spinner animation="border" /> : <p>{data}</p>}
             </Col>
          </Row>
+         
       </Container>
    );
 };
