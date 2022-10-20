@@ -4,10 +4,23 @@ import { ReactElement, useState, useEffect, useCallback , SetStateAction} from "
 import { Container, Row, Col, Button, Spinner } from "react-bootstrap";
 import axios from "axios";
 
+
+
 const Index = () => {
    const [data, setData] = useState("");
    const [loading, setLoading] = useState(true);
    const [name, setName] = useState("");
+
+
+   function copyPassage() {
+      const copyText = document.getElementById("generated-text");
+      if (copyText) {
+            const birthdayWish = copyText.innerText;
+            navigator.clipboard.writeText(birthdayWish);
+            alert("Copied birthday Wish.");
+         }
+     
+    }
 
    const getData = useCallback(async () => {
       setLoading(true);
@@ -48,6 +61,21 @@ const Index = () => {
                >
                   Generate New Wish
                </Button>
+
+
+
+               <Button
+                  variant="primary"
+                  onClick={() => {
+                     copyPassage();
+                  }} 
+               >
+                  Copy Quote
+               </Button>
+               
+            
+
+
             </Col>
          </Row>
 {/* 
@@ -59,23 +87,16 @@ const Index = () => {
                   onChange={(e) => { */}
 
 
-
-
-
-
-
-                       
-
-
          <Row>
             <Col>
-               {loading ? <Spinner animation="border" /> : <p>{data}</p>}
+               {loading ? <Spinner animation="border" /> : <p id="generated-text">{data}</p>}
             </Col>
          </Row>
-         
+
       </Container>
    );
 };
+
 
 export default Index;
 
