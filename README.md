@@ -23,8 +23,7 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Installed packages
-###### 1. Bootstrap-react
-###### 2. Bootstrap
-###### 3. Axios
-###### 4. MongoDB
-###### 5. React-icons
+###### 1. Tailwind CSS
+###### 2. Axios
+###### 3. MongoDB
+###### 4. React-icons

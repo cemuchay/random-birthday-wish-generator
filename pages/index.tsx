@@ -48,10 +48,11 @@ const Index = () => {
       <Container fluid>
          <Row>
             <Col>
-               <h1>Birthday Wish Generator</h1>
+               <h1 className="text-3xl font-bold text-center m-3">Birthday Wish Generator</h1>
             </Col>
          </Row>
-         <Row>
+         <div className="grid grid-cols-4 gap-4">
+
             <Col>
                <Button
                   variant="primary"
@@ -77,7 +78,7 @@ const Index = () => {
 
 
             </Col>
-         </Row>
+            </div>
 {/* 
          <Row>
             <Col>
@@ -85,6 +86,7 @@ const Index = () => {
                   type="text"
                   value={name}
                   onChange={(e) => { */}
+                  
 
 
          <Row>
