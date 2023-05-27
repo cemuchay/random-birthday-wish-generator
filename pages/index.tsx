@@ -25,7 +25,7 @@ const Index = () => {
    const getData = useCallback(async () => {
       setLoading(true);
       axios
-         .get(`https://birthday-wish-generator-api.vercel.app/generate-wish`)
+         .get(`https://birthday-wish-generator-api.vercel.app/v1/generate-wish`)
          .then((response) => {
             const res = response.data;
             if (res.success) {
